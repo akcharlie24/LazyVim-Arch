@@ -20,6 +20,9 @@ require("lazy").setup({
     -- import/override with your plugins
     { import = "plugins" },
     -- { "catppuccin/nvim", config = "catppuccin.colorscheme" },
+    -- Themes are coming from colorschemes.lua
+    -- Below Is Code Runner Extension
+    { "CRAG666/code_runner.nvim", config = true },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
