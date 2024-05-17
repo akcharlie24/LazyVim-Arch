@@ -25,11 +25,12 @@ require("lazy").setup({
     -- Below Is Code Runner Extension
     { "CRAG666/code_runner.nvim", config = true },
     --Temporary fix for the breaking changes issue
-    {
-      "lukas-reineke/indent-blankline.nvim",
-      event = "LazyFile",
-      version = "=3.5.4",
-    },
+    --Issue resolved ( just update your neovim to version 0.10 (stable))
+    -- {
+    --   "lukas-reineke/indent-blankline.nvim",
+    --   event = "LazyFile",
+    --   version = "=3.5.4",
+    -- },
     {
       "christoomey/vim-tmux-navigator",
       cmd = {
