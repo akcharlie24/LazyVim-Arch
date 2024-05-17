@@ -16,13 +16,20 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.linting.eslint" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
-    -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
+    --mini-indentscope is being moved to extras
+    { import = "lazyvim.plugins.extras.ui.mini-indentscope" },
     -- import/override with your plugins
     { import = "plugins" },
     -- { "catppuccin/nvim", config = "catppuccin.colorscheme" },
     -- Themes are coming from colorschemes.lua
     -- Below Is Code Runner Extension
     { "CRAG666/code_runner.nvim", config = true },
+    --Temporary fix for the breaking changes issue
+    {
+      "lukas-reineke/indent-blankline.nvim",
+      event = "LazyFile",
+      version = "=3.5.4",
+    },
     {
       "christoomey/vim-tmux-navigator",
       cmd = {
