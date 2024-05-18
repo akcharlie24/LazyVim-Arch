@@ -24,6 +24,7 @@ require("lazy").setup({
     -- Themes are coming from colorschemes.lua
     -- Below Is Code Runner Extension
     { "CRAG666/code_runner.nvim", config = true },
+    --{ "github/copilot.vim" },
     --Temporary fix for the breaking changes issue
     --Issue resolved ( just update your neovim to version 0.10 (stable))
     -- {
