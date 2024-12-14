@@ -10,6 +10,8 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
+    --
+    -- (FIXED the version to v13.9.1 as I dont like v14.x)
     { "LazyVim/LazyVim", tag = "v13.9.1", import = "lazyvim.plugins" },
     -- import any extras modules here
     { import = "lazyvim.plugins.extras.lang.typescript" },
@@ -106,8 +108,13 @@ require("lazy").setup({
     lazy = false,
     -- It's recommended to leave version=false for now, since a lot the plugin that support versioning,
     -- have outdated releases, which may break your Neovim install.
+    --
+    -- TODO: (DONT know about version false for now if something breaks then can check it out)
+    --
+    -- (version is set to false for now)
     -- version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
+    -- checker is set to false to stop auto updating to v14.x (if you wish to enable updates, please remove the checker altogether)
     checker = {
       enabled = false,
     },
