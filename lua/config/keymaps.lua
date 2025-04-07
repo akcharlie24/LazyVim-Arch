@@ -7,3 +7,7 @@ vim.keymap.set(
   require("telescope.builtin").resume,
   { noremap = true, silent = true, desc = "Resume" }
 )
+
+-- This is for setting the behaviour for alt+backspace key in linux --> Please change accordingly for macOS
+
+-- vim.keymap.set("i", "<A-BS>", "<C-w>", { noremap = true, silent = true, desc = "Delete previous word" })
