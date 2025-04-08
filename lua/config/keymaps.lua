@@ -8,6 +8,11 @@ vim.keymap.set(
   { noremap = true, silent = true, desc = "Resume" }
 )
 
--- This is for setting the behaviour for alt+backspace key in linux --> Please change accordingly for macOS
+-- This is for setting the behaviour for alt+backspace key in linux --> NOTE: Please change accordingly for macOS
 
--- vim.keymap.set("i", "<A-BS>", "<C-w>", { noremap = true, silent = true, desc = "Delete previous word" })
+vim.keymap.set("i", "<A-BS>", "<C-w>", { noremap = true, silent = true, desc = "Delete previous word" })
+
+-- This is for the cwd search using the leader + leader
+vim.keymap.set("n", "<leader><leader>", function()
+  require("telescope.builtin").find_files({ cwd = vim.fn.getcwd() })
+end, { noremap = true, silent = true, desc = "Find files in cwd" })
